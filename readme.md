@@ -36,3 +36,22 @@ We make the cloning convenient, for example, via a Factory.
 2. An existing design is a Prototype
 3. We copy the prototype and customize
 4. We want to make cloning convenient
+
+## Singleton
+
+For some components it only makes sense to have one in the system. For example, Database repository or connection, Object factory.
+
+This can solve some performance issues, since the initializer can be expensive resource wise. We provide every user with the same instance of this object that was created once.
+
+You don't want additional copies of this object.
+
+Need to take care of lazy instantiation. You initialize the Singleton instance only when it is needed, and after that every user accesses the same instance.
+
+> A component that is instantiated only once.
+
+### Main Concepts
+
+* Multiple ways of implementation of a Singleton; metaclass, decorator, custom allocator.
+* Laziness is easy, just init on first request.
+* Monostate variation.
+* Testability issues.
