@@ -182,3 +182,31 @@ Decorator typically aggregates (or has reference to) what it is decorating, whic
 ## Chain of Responsibility
 
 Sequence of handlers processing an event one after another. A chain of components who all get a chance to process a command or a query, optionally having default processing implementation and an ability to terminate the processing chain.
+
+In some cases you can implement Chain of Responsibility as a Linked List.
+
+### Chain of Responsibility: Command Query Separation
+
+Whenever we operate on objects, we separate all of the invocations into two different concepts; `Query` and `Command`.
+
+A `Command` is something that you send when you're asking for an action or a change.
+
+A `Query` is asking for information, without the necessity to change anything.
+
+`CQS` is a concept that looks for having separate means of sending commands and queries to.
+
+### Chain of Responsibility: Main Concepts
+
+* You can implement Chain of Responsibility design pattern as a Linked-List/Chain of references or a centralized construct.
+* Enlist objects in the Chain, possibly controlling their order; either by priority or any other metric. Every element in the Chain can stop the Chain processing and prevent the information from proceeding to other elements of the Chain.
+* You can also remove elements from the Chain.
+
+## Command
+
+The motivation of this design pattern is to stop using perishable statements, which are the case for the ordinary statements. This means, that for example, variable assignment is a perishable statement, because you can't undo/rollback to the previous state before executing that statement. This is similar to transaction based state. Another problem that the Command design pattern tries to solve is that you can't serialize sequence of actions (calls). We want an object that represents an operation.
+
+### Command: Use cases
+
+GUI commands, multi-level undo/redo, macro recording, and more.
+
+> A command is an object that represents the instruction to perform certain action. Contains all the necessary information for the action to be taken, as well as for logging purposes if desired.
