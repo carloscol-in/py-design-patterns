@@ -207,6 +207,33 @@ The motivation of this design pattern is to stop using perishable statements, wh
 
 ### Command: Use cases
 
-GUI commands, multi-level undo/redo, macro recording, and more.
+GUI commands, multi-level undo/redo, macro recording, and more. Sometimes called a `Macro`. Sequence of commands that you want to string together.
 
 > A command is an object that represents the instruction to perform certain action. Contains all the necessary information for the action to be taken, as well as for logging purposes if desired.
+
+### Composite Commands
+
+Composite commands is the way to create commands that span more than two members that could have its own command unit each. A Composite Command is a Command, and also a list of Commands.
+
+### Command: Main Concepts
+
+With the Command design pattern you encapsulate all the operation details in a separate object. You can also define the instruction for applying the command, either in the command or somewhere else. You can also construct the functionality to undo the command. With the Command design pattern you can also create sequences of commands, which are usually called `macros`.
+
+## Interpreter
+
+Everything that we do involves the interpretation of text by the computer. The Interpreter design pattern is all about turning text/strings into OOP based structures in a complicated process.
+
+> A component that processes structured data. Does so by turning it into separate lexical tokens (lexing) and then interpreting sequences of said tokens (parsing).
+
+On simple cases, the Interpreter design pattern works in two stages: lexing and parsing.
+
+* Lexing turns text into a set of tokens.
+* Parsing tokens into meaningful constructs.
+
+## Iterator
+
+An __iterator__ is a class that facilitates the traversal. An iterator usually keeps a reference to the current element. An iterator knows how to move from the current element to a different element covering all the elements in the Data Structure.
+
+The __iterator__ protocol requires `__iter__()` to expose the iterator, which uses `__next__()` to return each of the iterated elements, or you can raise a `StopIteration` when it's done.
+
+> An object that facilitates the traversal of a Data Structure.
