@@ -237,3 +237,12 @@ An __iterator__ is a class that facilitates the traversal. An iterator usually k
 The __iterator__ protocol requires `__iter__()` to expose the iterator, which uses `__next__()` to return each of the iterated elements, or you can raise a `StopIteration` when it's done.
 
 > An object that facilitates the traversal of a Data Structure.
+
+### Iterator: Main Concepts
+
+* Stateful iterators cannot be recursive.
+* Yield allows for much more succint iteration.
+
+## Mediator
+
+> Facilitates communication between components.
