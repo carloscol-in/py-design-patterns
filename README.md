@@ -245,4 +245,18 @@ The __iterator__ protocol requires `__iter__()` to expose the iterator, which us
 
 ## Mediator
 
-> Facilitates communication between components.
+> Facilitates communication between different components.
+
+The motivations may be that components may go in and out of a system at any time (chat room participants, players in MMORPG). It wouldn't be ideal for them to have direct references between one another, since those references may go dead. That's why you want them all to refer to one central component that handles communication.
+
+> The Mediator design pattern is a component that facilitates the communication between components without them being aware, necessarily, about other components, or having direct access to each other.
+
+Typically, you make every object that requires the Mediator component depend on it; for example, by depending on it in the initializer. The Mediator engages in bidirectional communication with its connected components. The mediator can have functions that only the dependant components can call, and the components have functions that the Mediator can call.
+
+Event processing libraries can simplify the implementation of the communication between components.
+
+## Memento
+
+> A token/handle to represent the state of the system at some point in time. Lets us rollback to the state on which the Memento token was generated. May or may not directly expose state information, and it may as long as state information isn't mutable.
+
+The motivation for this design pattern is that you may have an object or a system that goes through changes regularly. There are different ways of navigating those changes; with the Command design pattern, and enable commands to `undo` themselves. Another aproach is to save a snapshot of the current system state at any point in time.
