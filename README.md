@@ -260,3 +260,14 @@ Event processing libraries can simplify the implementation of the communication 
 > A token/handle to represent the state of the system at some point in time. Lets us rollback to the state on which the Memento token was generated. May or may not directly expose state information, and it may as long as state information isn't mutable.
 
 The motivation for this design pattern is that you may have an object or a system that goes through changes regularly. There are different ways of navigating those changes; with the Command design pattern, and enable commands to `undo` themselves. Another aproach is to save a snapshot of the current system state at any point in time.
+
+## Observer
+
+> The Observer design pattern has as motivation to notify an stakeholder when certain actions are performed in the system.
+
+You can Observe for object's properties changes. You could observe for external events. We want to listen for events and be notified when they occur. Also, this notifications should include useful data either about the event or changed data. We should also be able to unsubscribe from events we're no longer interested in.
+
+The Observer design pattern is comprised of two main components:
+
+* The __observer__ is an object that wishes to be informed when something happens in the system.
+* The entity generating the event is the __observable__.
