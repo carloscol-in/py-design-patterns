@@ -85,7 +85,7 @@ This isn't scalable. Bridge pattern helps us avoiding this.
 
 > Escape complexity explosion as you get more combinations of multiple classes.
 
-Connects two or more hierarchies of classes using *composition*.
+Connects two or more hierarchies of classes using _composition_.
 
 ### Bridge: Main Concepts
 
@@ -269,5 +269,24 @@ You can Observe for object's properties changes. You could observe for external 
 
 The Observer design pattern is comprised of two main components:
 
-* The __observer__ is an object that wishes to be informed when something happens in the system.
-* The entity generating the event is the __observable__.
+* The _observer_ is an object that wishes to be informed when something happens in the system.
+* The entity generating the event is the _observable_.
+
+## State
+
+This design pattern states that some valid actions and behaviours should be available according to the state of a component. Changes in event could be explicit or on response to an event (_Observer_). A formalized construct which manages state and transitions is called a _state machine_.
+
+* Given sufficient complexity, it's worth it to define states and events/triggers.
+* Can define
+  * State entry/exit behaviours
+  * Action when a particular event causes a transition
+  * Guard conditions enabling/disabling a transition
+  * Default action when no transitions are found for an event
+
+## Strategy
+
+> System behaviour partially specified at runtime.
+
+Many algorithms can be decomposed into high-level and low-level parts.
+
+The process for defining a good Strategy logic in your code is to first define the high-level logic for the algorithm, then define a Strategy interface for each implementation you need. Also, provide for dynamic composition of strategies in the resulting object.
