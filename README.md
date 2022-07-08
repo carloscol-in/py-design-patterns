@@ -290,3 +290,13 @@ This design pattern states that some valid actions and behaviours should be avai
 Many algorithms can be decomposed into high-level and low-level parts.
 
 The process for defining a good Strategy logic in your code is to first define the high-level logic for the algorithm, then define a Strategy interface for each implementation you need. Also, provide for dynamic composition of strategies in the resulting object.
+
+## Template
+
+> A high-level blueprint for an algorithm to be completed by inheritors.
+
+Algorithms can be decomposed into common parts + specifics. Strategy pattern does this through composition; high-level algorithm expects that strategies implement according to an interface.
+
+The Template design pattern does the same thing, through inheritance. You do this by defining the overall algorithm in a base class, using also abstract members. Then inheritos will override those abstract members. Template method gets invoked to get the work done.
+
+> Allows us to define the 'skeleton' of the algorithm, with concrete implementations defined in the subclasses.
