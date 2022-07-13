@@ -300,3 +300,18 @@ Algorithms can be decomposed into common parts + specifics. Strategy pattern doe
 The Template design pattern does the same thing, through inheritance. You do this by defining the overall algorithm in a base class, using also abstract members. Then inheritos will override those abstract members. Template method gets invoked to get the work done.
 
 > Allows us to define the 'skeleton' of the algorithm, with concrete implementations defined in the subclasses.
+
+You have to define an algorithm at a high-level in a parent class. Define constituent parts as abstract methods/properties. Inherit the algorithm class, providing necessary overrides.
+
+## Visitor
+
+> Allows adding extra behaviours to entire hierarchies of classes.
+
+The motivation for this design pattern is that maybe you need to define a new operation on an entire class hierarchy. We don't want to add that functionality to all the classes hierarchy. Another valid motivation to use this design pattern is if you need access to non-common aspects of the classes in the hierarchy.
+
+Motivation
+
+* Create an external component to handle rendering
+  * But avoid explicit type checks
+
+> A Visitor component knows how to traverse a data structure composed of (possibly related) types.
