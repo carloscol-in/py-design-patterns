@@ -31,8 +31,6 @@ class ExpressionPrinter:
             buffer.append(')')
 
 
-
-
 if __name__ == '__main__':
     e = AdditionExpression(
         DoubleExpression(1),
