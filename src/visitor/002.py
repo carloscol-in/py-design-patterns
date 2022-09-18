@@ -1,6 +1,5 @@
 
 from abc import ABC
-from re import S
 
 
 def _qualname(obj):
